@@ -1,0 +1,111 @@
+body {
+  background-color: #000;
+}
+.btn-success {
+border:1px solid #8120f1; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #9F55F4; background-image: -webkit-gradient(linear, left top, left bottom, from(#9F55F4), to(#6C3AA6));
+ background-image: -webkit-linear-gradient(top, #9F55F4, #6C3AA6);
+ background-image: -moz-linear-gradient(top, #9F55F4, #6C3AA6);
+ background-image: -ms-linear-gradient(top, #9F55F4, #6C3AA6);
+ background-image: -o-linear-gradient(top, #9F55F4, #6C3AA6);
+ background-image: linear-gradient(to bottom, #9F55F4, #6C3AA6);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#9F55F4, endColorstr=#6C3AA6);
+-webkit-box-shadow: 2px 2px 7px 5px rgba(0,0,0,0.25); 
+-moz-box-shadow: 2px 2px 7px 5px rgba(0,0,0,0.25); 
+box-shadow: 2px 2px 7px 5px rgba(0,0,0,0.25);
+/*background-color: #9f55f4; og*/
+/*border: none;*/
+}
+
+.btn-success:hover {
+  border:1px solid #6b0ed5;
+ background-color: #8D4CD9; background-image: -webkit-gradient(linear, left top, left bottom, from(#8D4CD9), to(#552D82));
+ background-image: -webkit-linear-gradient(top, #8D4CD9, #552D82);
+ background-image: -moz-linear-gradient(top, #8D4CD9, #552D82);
+ background-image: -ms-linear-gradient(top, #8D4CD9, #552D82);
+ background-image: -o-linear-gradient(top, #8D4CD9, #552D82);
+ background-image: linear-gradient(to bottom, #8D4CD9, #552D82);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#8D4CD9, endColorstr=#552D82);
+}
+h1 {
+  font-size: 4em;
+  text-shadow: 2px 2px 10px black;
+}
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(http://i.imgur.com/K3mPv14.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(http://i.imgur.com/emvhOnb.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+    opacity: 1;
+}
