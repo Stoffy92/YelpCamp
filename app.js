@@ -18,7 +18,8 @@ var commentRoutes     = require("./routes/comments"),
     indexRoutes       = require("./routes/index");
 
 
-mongoose.connect("mongodb://localhost/yelp_camp_v12"); // DB Connection 
+//mongoose.connect("mongodb://localhost/yelp_camp_v12"); // DB Connection 
+mongoose.connect("mongodb://stoffy:admin1@ds119662.mlab.com:19662/yelp-camp-92");
 app.use(flash());
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs"); //ejs viewing engine, get rid of .ejs
